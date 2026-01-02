@@ -40,7 +40,7 @@ Singleton {
 
     readonly property string homeDir: Paths.strip(StandardPaths.writableLocation(StandardPaths.HomeLocation))
     readonly property string configDir: Paths.strip(StandardPaths.writableLocation(StandardPaths.ConfigLocation))
-    readonly property string shellDir: Paths.strip(Qt.resolvedUrl(".").toString()).replace("/Common/", "")
+    readonly property string shellDir: Quickshell.shellDir
     readonly property string wallpaperPath: {
         if (typeof SessionData === "undefined")
             return "";
